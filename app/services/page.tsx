@@ -49,13 +49,13 @@ export default function ServicesPage() {
                 >
                   <div className={cn(index % 2 === 1 && "lg:order-2")}>
                     <div className="panel overflow-hidden p-3">
-                      <div className="relative min-h-[340px] overflow-hidden rounded-[1.65rem]">
+                      <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] sm:aspect-square lg:min-h-[340px] lg:aspect-auto">
                         <Image
                           src={service.image}
                           alt={service.title}
                           fill
                           sizes="(max-width: 1024px) 100vw, 38vw"
-                          className="object-cover"
+                          className="object-cover object-center"
                         />
                         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0.08),rgba(7,16,21,0.66))]" />
                         <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-xs uppercase tracking-[0.22em] text-white backdrop-blur-sm">
@@ -115,4 +115,3 @@ export default function ServicesPage() {
     </>
   );
 }
-

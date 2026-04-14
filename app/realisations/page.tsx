@@ -48,13 +48,13 @@ export default function RealisationsPage() {
             {realisations.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.05}>
                 <article className="panel h-full overflow-hidden p-3">
-                  <div className="relative min-h-[310px] overflow-hidden rounded-[1.55rem]">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-[1.55rem] sm:aspect-square lg:min-h-[310px] lg:aspect-auto">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 46vw"
-                      className="object-cover transition duration-500 hover:scale-[1.03]"
+                      className="object-cover object-center transition duration-500 hover:scale-[1.03]"
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0.06),rgba(7,16,21,0.7))]" />
                     <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-xs uppercase tracking-[0.22em] text-white backdrop-blur-sm">

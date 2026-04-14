@@ -38,24 +38,16 @@ export function SiteHeader() {
       )}
     >
       <div className="container-shell flex h-20 items-center justify-between gap-4">
-        <Link href="/" className="flex min-w-0 items-center gap-3 sm:gap-4">
-          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 sm:h-14 sm:w-14">
+        <Link href="/" className="flex min-w-0 flex-1 items-center">
+          <span className="relative h-12 w-[164px] shrink-0 overflow-hidden sm:h-14 sm:w-[210px] lg:w-[228px]">
             <Image
               src="/images/logo.jpg"
               alt="Logo SEF SARL"
               fill
-              sizes="56px"
-              className="object-cover"
+              priority
+              sizes="(max-width: 640px) 164px, (max-width: 1024px) 210px, 228px"
+              className="object-contain object-left"
             />
-          </span>
-
-          <span className="min-w-0">
-            <span className="block truncate font-display text-[1.15rem] uppercase tracking-[0.22em] text-white sm:text-[1.45rem]">
-              SEF SARL
-            </span>
-            <span className="mt-1 block truncate text-[0.62rem] uppercase tracking-[0.28em] text-slate-300 sm:text-[0.72rem]">
-              Injection diesel | Cameroun
-            </span>
           </span>
         </Link>
 

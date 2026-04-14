@@ -42,13 +42,13 @@ export function CompanyIntro() {
         </Reveal>
 
         <Reveal delay={0.12} className="panel overflow-hidden p-3">
-          <div className="relative min-h-[440px] overflow-hidden rounded-[1.65rem]">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] sm:aspect-square lg:min-h-[440px] lg:aspect-auto">
             <Image
               src="/images/injections-1.jpg"
               alt="Pompe d’injection et injecteurs diesel préparés en atelier"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0.08),rgba(7,16,21,0.72))]" />
             <div className="absolute inset-x-0 bottom-0 p-6">
@@ -65,4 +65,3 @@ export function CompanyIntro() {
     </section>
   );
 }
-
