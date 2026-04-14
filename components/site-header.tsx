@@ -32,7 +32,7 @@ export function SiteHeader() {
       className={cn(
         "sticky top-0 z-50 border-b transition-all duration-300",
         isScrolled || isMenuOpen
-          ? "border-white/10 bg-midnight/92 shadow-[0_18px_45px_rgba(7,16,21,0.35)] backdrop-blur-xl"
+          ? "border-white/10 bg-midnight/[0.92] shadow-[0_18px_45px_rgba(7,16,21,0.35)] backdrop-blur-xl"
           : "border-white/5 bg-midnight/70 backdrop-blur-md"
       )}
     >
@@ -80,7 +80,7 @@ export function SiteHeader() {
         <button
           type="button"
           onClick={() => setIsMenuOpen((current) => !current)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition hover:border-white/20 lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition hover:border-white/30 lg:hidden"
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
         >

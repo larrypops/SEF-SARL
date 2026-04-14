@@ -42,7 +42,7 @@ export function HeroSection() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(7,16,21,0.92)_16%,rgba(7,16,21,0.68)_44%,rgba(7,16,21,0.36)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(11,95,255,0.24),transparent_26%),radial-gradient(circle_at_bottom_left,rgba(20,160,111,0.22),transparent_20%)]" />
-        <div className="subtle-grid absolute inset-0 opacity-35" />
+        <div className="subtle-grid absolute inset-0 opacity-[0.35]" />
       </motion.div>
 
       <div className="container-shell relative flex min-h-[calc(100svh-5rem)] items-end py-16 md:py-20">
@@ -101,7 +101,7 @@ export function HeroSection() {
           </motion.ul>
         </motion.div>
 
-        <div className="absolute bottom-10 right-6 hidden max-w-sm border-l border-white/15 pl-6 text-right lg:block">
+        <div className="absolute bottom-10 right-6 hidden max-w-sm border-l border-white/[0.15] pl-6 text-right lg:block">
           <p className="text-xs uppercase tracking-[0.32em] text-[#8FE7C4]">Présence locale</p>
           <p className="mt-3 text-sm leading-7 text-slate-200">
             Yaoundé, Tropicana, à environ 20 m de l’Institut Universitaire NDI Samba.

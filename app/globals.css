@@ -80,7 +80,8 @@
   }
 
   .panel {
-    @apply rounded-[2rem] border border-slate-200 bg-white/92 shadow-panel backdrop-blur-sm;
+    @apply rounded-[2rem] border border-slate-200 shadow-panel backdrop-blur-sm;
+    background-color: rgb(255 255 255 / 0.92);
   }
 
   .dark-panel {
@@ -96,7 +97,14 @@
   }
 
   .button-secondary {
-    @apply button-base border border-white/15 bg-white/8 text-white hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/12;
+    @apply button-base text-white hover:-translate-y-0.5;
+    border: 1px solid rgb(255 255 255 / 0.15);
+    background-color: rgb(255 255 255 / 0.08);
+  }
+
+  .button-secondary:hover {
+    border-color: rgb(255 255 255 / 0.3);
+    background-color: rgb(255 255 255 / 0.12);
   }
 
   .button-dark {
@@ -132,4 +140,3 @@
     background-size: 48px 48px;
   }
 }
-
