@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #071015;
+  }
+
+  body {
+    @apply bg-cloud font-body text-slate-900 antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(11, 95, 255, 0.08), transparent 26%),
+      radial-gradient(circle at bottom right, rgba(20, 160, 111, 0.1), transparent 24%);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.18;
+    background-image:
+      linear-gradient(to right, rgba(7, 16, 21, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(7, 16, 21, 0.05) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at center, black, transparent 88%);
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-[0.01em];
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+  }
+
+  :focus-visible {
+    @apply ring-2 ring-teal ring-offset-2 ring-offset-cloud;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-[90rem] px-6 md:px-8 lg:px-10;
+  }
+
+  .section-space {
+    @apply py-20 md:py-24 lg:py-28;
+  }
+
+  .section-divider {
+    @apply border-t border-slate-200/70;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-teal;
+  }
+
+  .panel {
+    @apply rounded-[2rem] border border-slate-200 bg-white/92 shadow-panel backdrop-blur-sm;
+  }
+
+  .dark-panel {
+    @apply rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-sm;
+  }
+
+  .button-base {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold tracking-[0.08em] transition duration-300;
+  }
+
+  .button-primary {
+    @apply button-base bg-teal text-white shadow-glow hover:-translate-y-0.5 hover:bg-[#10875F];
+  }
+
+  .button-secondary {
+    @apply button-base border border-white/15 bg-white/8 text-white hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/12;
+  }
+
+  .button-dark {
+    @apply button-base bg-midnight text-white hover:-translate-y-0.5 hover:bg-slate-900;
+  }
+
+  .button-outline {
+    @apply button-base border border-slate-300 bg-transparent text-slate-900 hover:-translate-y-0.5 hover:border-teal hover:text-midnight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow-line {
+    height: 1px;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(11, 95, 255, 0),
+        rgba(11, 95, 255, 0.75),
+        rgba(20, 160, 111, 0.78),
+        rgba(20, 160, 111, 0)
+      );
+  }
+
+  .subtle-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
