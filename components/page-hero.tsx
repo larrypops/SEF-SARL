@@ -22,13 +22,21 @@ export function PageHero({
   imageAlt
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-midnight text-white">
-      <div className="absolute inset-0 opacity-60">
-        <div className="subtle-grid absolute inset-0" />
-        <div className="absolute inset-0 bg-soft-radial" />
+    <section className="relative isolate overflow-hidden bg-midnight text-white">
+      <div className="absolute inset-0">
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(7,16,21,0.92)_14%,rgba(7,16,21,0.72)_44%,rgba(7,16,21,0.54)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(11,95,255,0.24),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(20,160,111,0.2),transparent_24%)]" />
+        <div className="subtle-grid absolute inset-0 opacity-[0.28]" />
       </div>
 
-      <div className="container-shell relative grid gap-12 py-16 md:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center">
+      <div className="container-shell relative flex min-h-[calc(76svh-5rem)] items-end py-16 md:py-20">
         <Reveal className="max-w-3xl">
           <p className="eyebrow text-[#8FE7C4]">{eyebrow}</p>
           <h1 className="mt-5 text-4xl leading-tight text-balance md:text-6xl">{title}</h1>
@@ -53,27 +61,7 @@ export function PageHero({
             ))}
           </ul>
         </Reveal>
-
-        <Reveal delay={0.12} className="relative min-h-[320px] overflow-hidden rounded-[2rem] border border-white/10">
-          <Image
-            src={image}
-            alt={imageAlt}
-            fill
-            sizes="(max-width: 1024px) 100vw, 42vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0.08),rgba(7,16,21,0.68))]" />
-          <div className="absolute inset-x-0 bottom-0 p-6">
-            <div className="dark-panel p-5">
-              <p className="text-xs uppercase tracking-[0.32em] text-[#8FE7C4]">SEF SARL</p>
-              <p className="mt-3 max-w-sm text-sm leading-7 text-slate-200">
-                Intervention fiable à Yaoundé, Douala et pour les besoins diesel professionnels au Cameroun.
-              </p>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
 }
-
