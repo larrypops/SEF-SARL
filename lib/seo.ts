@@ -42,6 +42,11 @@ type BreadcrumbItem = {
   path: string;
 };
 
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
 }
@@ -240,7 +245,7 @@ export function getLocalBusinessSchema() {
   };
 }
 
-export function getFaqSchema(items = faqs, path = "/") {
+export function getFaqSchema(items: readonly FaqItem[] = faqs, path = "/") {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
