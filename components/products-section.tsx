@@ -3,7 +3,8 @@ import Image from "next/image";
 import { ActionLink } from "@/components/action-link";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { company, products } from "@/lib/data";
+import { company } from "@/lib/data";
+import { products } from "@/lib/products";
 
 export function ProductsSection() {
   return (
@@ -43,7 +44,7 @@ export function ProductsSection() {
                 <div className="image-card-tall lg:min-h-[290px]">
                   <Image
                     src={product.image}
-                    alt={product.title}
+                    alt={product.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 28vw"
                     className="image-fill-portrait"

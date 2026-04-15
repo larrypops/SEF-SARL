@@ -185,45 +185,6 @@ export const services = [
 
 export const homeServices = services;
 
-export const products = [
-  {
-    id: "injecteur-common-rail",
-    title: "Injecteur Common Rail",
-    reference: "Pièce injection diesel",
-    description:
-      "Injecteur common rail adapté aux besoins de remplacement, de contrôle ou de remise en état sur plusieurs configurations de systèmes diesel modernes.",
-    applications: ["Véhicules de tourisme", "Utilitaires diesel", "Systèmes common rail"],
-    image: "/images/products/injecteur-common-rail.jpeg"
-  },
-  {
-    id: "injecteur-caterpillar-heui-c7-c9",
-    title: "Injecteur Caterpillar HEUI C7-C9",
-    reference: "Référence Caterpillar",
-    description:
-      "Injecteur Caterpillar HEUI destiné aux moteurs C7 et C9, recherché pour les engins, matériels lourds et applications diesel fortement sollicitées.",
-    applications: ["Caterpillar C7", "Caterpillar C9", "Engins et matériel lourd"],
-    image: "/images/products/injecteur-caterpillar-heui-c7-c9.jpeg"
-  },
-  {
-    id: "pompe-injection-delphi",
-    title: "Pompe d’injection Delphi",
-    reference: "Équipement circuit diesel",
-    description:
-      "Pompe d’injection Delphi proposée selon disponibilité pour accompagner une remise en service cohérente et un montage propre sur circuit diesel.",
-    applications: ["Pompes diesel", "Systèmes Delphi", "Maintenance injection"],
-    image: "/images/products/pompe-injection-delphi.jpeg"
-  },
-  {
-    id: "injecteur-pompe-caterpillar-c15",
-    title: "Injecteur-pompe Caterpillar C15",
-    reference: "Référence moteur lourd",
-    description:
-      "Injecteur-pompe Caterpillar C15 pour moteurs à forte sollicitation, avec accompagnement sur la compatibilité et la disponibilité de la référence.",
-    applications: ["Caterpillar C15", "Poids lourds", "Applications intensives"],
-    image: "/images/products/injecteur-pompe-caterpillar-c15.jpeg"
-  }
-] as const;
-
 export const repairShowcase = [
   {
     id: "pompe-injection-caterpillar-3306",
