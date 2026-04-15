@@ -5,6 +5,7 @@ import { DomainsSection } from "@/components/domains-section";
 import { FaqSection } from "@/components/faq-section";
 import { HeroSection } from "@/components/hero-section";
 import { JsonLd } from "@/components/json-ld";
+import { ProductsSection } from "@/components/products-section";
 import { RealisationsPreview } from "@/components/realisations-preview";
 import { ServicesOverview } from "@/components/services-overview";
 import { TestimonialsSection } from "@/components/testimonials-section";
@@ -43,6 +44,7 @@ export default function HomePage() {
       <HeroSection />
       <CompanyIntro />
       <ServicesOverview />
+      <ProductsSection />
       <AdvantagesSection />
       <DomainsSection />
       <RealisationsPreview />
