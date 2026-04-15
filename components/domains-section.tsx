@@ -20,8 +20,8 @@ export function DomainsSection() {
           <Reveal className="panel overflow-hidden p-3">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] sm:aspect-square lg:min-h-[440px] lg:aspect-auto">
               <Image
-                src="/images/injections-2.jpg"
-                alt="Injecteurs diesel préparés pour une intervention technique"
+                src="/images/image-03.jpeg"
+                alt="Pièces et éléments de circuit d’injection diesel préparés pour une intervention"
                 fill
                 sizes="(max-width: 1024px) 100vw, 35vw"
                 className="object-cover object-center"

@@ -44,8 +44,8 @@ export function CompanyIntro() {
         <Reveal delay={0.12} className="panel overflow-hidden p-3">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] sm:aspect-square lg:min-h-[440px] lg:aspect-auto">
             <Image
-              src="/images/injections-1.jpg"
-              alt="Pompe d’injection et injecteurs diesel préparés en atelier"
+              src="/images/image-02.jpeg"
+              alt="Technicien SEF SARL au travail sur un organe d’injection diesel en atelier"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
               className="object-cover object-center"

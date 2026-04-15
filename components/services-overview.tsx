@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Reveal } from "@/components/reveal";
@@ -20,6 +21,16 @@ export function ServicesOverview() {
           {homeServices.map((service, index) => (
             <Reveal key={service.id} delay={index * 0.06}>
               <article className="panel h-full p-8 md:p-10">
+                <div className="relative mb-8 aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-slate-200/70 bg-slate-100">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover object-center"
+                  />
+                </div>
+
                 <div className="flex items-start justify-between gap-6">
                   <span className="font-display text-sm uppercase tracking-[0.3em] text-teal">
                     {service.step}

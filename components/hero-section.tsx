@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import Image from "next/image";
 
 import { ActionLink } from "@/components/action-link";
 import { company, homeHighlights } from "@/lib/data";
@@ -27,19 +26,11 @@ export function HeroSection() {
     <section className="relative isolate overflow-hidden bg-midnight text-white">
       <motion.div
         aria-hidden
-        className="absolute inset-0"
+        className="absolute inset-0 bg-[url('/images/hero-mobile.jpeg')] bg-cover bg-top md:bg-[url('/images/hero-image.jpg')] md:bg-center"
         initial={reduceMotion ? undefined : { scale: 1.06 }}
         animate={reduceMotion ? undefined : { scale: 1 }}
         transition={reduceMotion ? undefined : { duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <Image
-          src="/images/hero-image.jpg"
-          alt="Technicien en intervention sur un système d’injection diesel"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
         <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(7,16,21,0.92)_16%,rgba(7,16,21,0.68)_44%,rgba(7,16,21,0.36)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(11,95,255,0.24),transparent_26%),radial-gradient(circle_at_bottom_left,rgba(20,160,111,0.22),transparent_20%)]" />
         <div className="subtle-grid absolute inset-0 opacity-[0.35]" />

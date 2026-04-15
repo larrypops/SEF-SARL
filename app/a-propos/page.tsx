@@ -49,8 +49,8 @@ export default function AboutPage() {
           <Reveal delay={0.12} className="panel overflow-hidden p-3">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] bg-midnight sm:aspect-square lg:min-h-[460px] lg:aspect-auto">
               <Image
-                src="/images/hero-image.jpg"
-                alt="Atelier injection diesel SEF SARL"
+                src="/images/image-01.jpeg"
+                alt="Intervention mécanique lourde réalisée dans l’environnement SEF SARL"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover object-center opacity-90"

@@ -67,7 +67,7 @@ export const services = [
       "Un meilleur démarrage, une réponse moteur plus stable et une consommation plus maîtrisée"
     ],
     equipment: ["Poids lourds", "Engins", "Camions", "Utilitaires diesel"],
-    image: "/images/injections-3.jpg"
+    image: "/images/image-01.jpeg"
   },
   {
     id: "injecteurs-mecaniques-electroniques",
@@ -84,7 +84,7 @@ export const services = [
       "Intervention adaptée aux véhicules de tourisme comme aux véhicules professionnels"
     ],
     equipment: ["Véhicules de tourisme", "Utilitaires", "Camions", "Flottes diesel"],
-    image: "/images/injections-2.jpg"
+    image: "/images/image-03.jpeg"
   },
   {
     id: "analyse-diagnostic",
@@ -101,7 +101,7 @@ export const services = [
       "Des décisions plus sûres pour les exploitants de véhicules et d’engins"
     ],
     equipment: ["Poids lourds", "Engins", "Véhicules particuliers", "Parcs de véhicules"],
-    image: "/images/hero-image.jpg"
+    image: "/images/injections-3.jpg"
   },
   {
     id: "intervention-technique",
@@ -118,7 +118,7 @@ export const services = [
       "Une intervention pensée pour réduire le temps d’arrêt"
     ],
     equipment: ["Ateliers partenaires", "Flottes", "Camions", "Engins diesel"],
-    image: "/images/injections-1.jpg"
+    image: "/images/image-02.jpeg"
   },
   {
     id: "vente-pieces",
@@ -135,7 +135,7 @@ export const services = [
       "Une solution plus complète pour remettre le véhicule au travail"
     ],
     equipment: ["Pompes", "Injecteurs", "Éléments de circuit", "Véhicules diesel"],
-    image: "/images/injections-3.jpg"
+    image: "/images/image-03.jpeg"
   }
 ] as const;
 
@@ -147,7 +147,8 @@ export const homeServices = [
     href: "/contact#formulaire",
     title: "Location de véhicule",
     shortDescription:
-      "Mise à disposition de véhicules selon les besoins du client, avec une approche orientée disponibilité, mobilité et continuité d’activité.",
+      "Location de véhicules pour déplacements privés, besoins professionnels et missions ponctuelles, avec une offre pensée pour la mobilité, la fiabilité et la disponibilité.",
+    image: "/images/service-02.png",
     equipment: ["Déplacements", "Missions professionnelles", "Besoins ponctuels", "Mobilité"]
   },
   {
@@ -156,7 +157,8 @@ export const homeServices = [
     href: "/contact#formulaire",
     title: "Reprogrammation des calculateurs et des clés des véhicules",
     shortDescription:
-      "Service de reprogrammation pour calculateurs et clés de véhicules afin d’accompagner certaines opérations électroniques, la remise en service et la sécurisation de l’usage.",
+      "Service de reprogrammation électronique pour calculateurs et clés afin d’accompagner les remises en service, les interventions ciblées et certains besoins de configuration véhicule.",
+    image: "/images/service-01.png",
     equipment: ["Clés de véhicules", "Calculateurs", "Diagnostic électronique", "Remise en service"]
   }
 ] as const;
@@ -222,7 +224,7 @@ export const realisations = [
       "Contrôle de la pompe, vérification des éléments critiques et remise en état pour retrouver un fonctionnement stable sur un véhicule utilitaire lourd.",
     result:
       "Le moteur retrouve une réponse plus régulière et l’exploitation du véhicule peut reprendre avec davantage de sérénité.",
-    image: "/images/injections-3.jpg"
+    image: "/images/image-01.jpeg"
   },
   {
     title: "Injecteurs diesel toutes marques contrôlés et repris",
@@ -233,7 +235,7 @@ export const realisations = [
       "Intervention ciblée sur un ensemble d’injecteurs diesel afin d’améliorer la régularité de pulvérisation et la qualité de combustion.",
     result:
       "Le client retrouve un moteur plus souple, un ralenti plus stable et une conduite plus rassurante.",
-    image: "/images/injections-2.jpg"
+    image: "/images/image-03.jpeg"
   },
   {
     title: "Diagnostic injection diesel avant remplacement",
@@ -244,7 +246,7 @@ export const realisations = [
       "Analyse approfondie pour isoler la source réelle du défaut et éviter des dépenses inutiles sur des organes non concernés.",
     result:
       "La réparation a pu être orientée plus vite, avec moins de temps perdu et une décision technique plus juste.",
-    image: "/images/hero-image.jpg"
+    image: "/images/image-02.jpeg"
   },
   {
     title: "Fourniture de pièces adaptées à une remise en service",
@@ -255,7 +257,7 @@ export const realisations = [
       "Sélection des pièces liées au circuit d’injection diesel pour accompagner une intervention et sécuriser le remontage.",
     result:
       "La remise en état a été finalisée avec une solution plus propre et plus cohérente pour le client.",
-    image: "/images/injections-1.jpg"
+    image: "/images/image-03.jpeg"
   },
   {
     title: "Appui technique sur une intervention complexe",
@@ -266,7 +268,7 @@ export const realisations = [
       "Accompagnement technique pour vérifier la cohérence du diagnostic, la qualité du remontage et les points critiques avant redémarrage.",
     result:
       "L’intervention s’est déroulée avec plus de maîtrise et un risque réduit de reprise de panne.",
-    image: "/images/injections-3.jpg"
+    image: "/images/image-02.jpeg"
   }
 ] as const;
 
