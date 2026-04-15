@@ -442,6 +442,39 @@ export const aboutStory = [
   "Notre force repose sur la précision du diagnostic, la qualité de l’intervention technique et une culture de service orientée vers la confiance, la clarté et la remise en route durable."
 ] as const;
 
+export const ceoJapanJourney = {
+  title: "Un parcours de formation renforcé au Japon",
+  description:
+    "Le dirigeant de SEF SARL s’est rendu au Japon pour approfondir sa maîtrise technique et consolider des méthodes de travail exigeantes autour des systèmes d’injection diesel. Cette expérience a contribué à renforcer la rigueur, la discipline d’atelier et le niveau d’exigence qui guident aujourd’hui les interventions réalisées au Cameroun.",
+  highlights: [
+    "Approfondissement de la compétence technique dans un environnement exigeant",
+    "Exposition à des standards de méthode, de précision et de sérieux reconnus",
+    "Retour au Cameroun avec une exigence renforcée au service des clients de SEF SARL"
+  ],
+  gallery: [
+    {
+      image: "/images/ceo-japan/ceo-japan-1.jpeg",
+      alt: "Dirigeant de SEF SARL au Japon devant le panneau Welcome to Japan",
+      caption: "Arrivée au Japon dans le cadre d’un parcours de renforcement technique."
+    },
+    {
+      image: "/images/ceo-japan/ceo-japan-2.jpeg",
+      alt: "Dirigeant de SEF SARL au Japon pendant son parcours de formation",
+      caption: "Immersion dans un environnement structuré et orienté discipline métier."
+    },
+    {
+      image: "/images/ceo-japan/ceo-japan-3.jpeg",
+      alt: "Dirigeant de SEF SARL en déplacement vers le Japon pour sa formation",
+      caption: "Déplacement consacré à l’apprentissage et à l’élévation du niveau d’exigence."
+    },
+    {
+      image: "/images/ceo-japan/ceo-japan-4.jpeg",
+      alt: "Dirigeant de SEF SARL au Japon dans le cadre de son parcours professionnel",
+      caption: "Une expérience internationale qui nourrit la crédibilité technique de l’entreprise."
+    }
+  ]
+} as const;
+
 export const companyPillars = [
   {
     title: "Mission",

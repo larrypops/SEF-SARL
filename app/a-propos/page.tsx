@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { ActionLink } from "@/components/action-link";
+import { CeoJapanSection } from "@/components/ceo-japan-section";
 import { CtaBanner } from "@/components/cta-banner";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
@@ -91,6 +92,8 @@ export default function AboutPage() {
           </Reveal>
         </div>
       </section>
+
+      <CeoJapanSection />
 
       <section className="section-divider section-space bg-[#EDF3F1]">
         <div className="container-shell">
