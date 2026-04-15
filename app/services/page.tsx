@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { company, services } from "@/lib/data";
-import { buildMetadata, getServicesSchema } from "@/lib/seo";
+import { buildMetadata, getBreadcrumbSchema, getServicesSchema, getWebPageSchema } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 export const metadata = buildMetadata({
@@ -14,6 +14,8 @@ export const metadata = buildMetadata({
   description:
     "Découvrez les services SEF SARL : réparation de pompes d’injection pour engins et camions, injecteurs mécaniques et électroniques, diagnostic fiable, intervention technique et vente de pièces au Cameroun.",
   path: "/services",
+  imagePath: "/images/injections-3.jpg",
+  imageAlt: "Pompe d’injection diesel contrôlée dans l’atelier SEF SARL",
   keywords: [
     "réparation injecteurs électroniques Cameroun",
     "maintenance circuit injection diesel",
@@ -24,6 +26,23 @@ export const metadata = buildMetadata({
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        data={getWebPageSchema({
+          title: "Services de réparation et diagnostic injection diesel",
+          description:
+            "Découvrez les services SEF SARL : réparation de pompes d’injection pour engins et camions, injecteurs mécaniques et électroniques, diagnostic fiable, intervention technique et vente de pièces au Cameroun.",
+          path: "/services",
+          type: "CollectionPage",
+          imagePath: "/images/injections-3.jpg",
+          imageAlt: "Pompe d’injection diesel remise en état chez SEF SARL"
+        })}
+      />
+      <JsonLd
+        data={getBreadcrumbSchema([
+          { name: "Accueil", path: "/" },
+          { name: "Services", path: "/services" }
+        ])}
+      />
       <JsonLd data={getServicesSchema()} />
       <PageHero
         eyebrow="Services SEF SARL"

@@ -2,23 +2,43 @@ import Image from "next/image";
 
 import { ActionLink } from "@/components/action-link";
 import { CtaBanner } from "@/components/cta-banner";
+import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { aboutStory, company, companyPillars, values } from "@/lib/data";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, getBreadcrumbSchema, getWebPageSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "À propos de SEF SARL",
   description:
     "Découvrez l’histoire, la mission, la vision et les engagements qualité de SEF SARL, spécialiste de l’injection diesel à Yaoundé et Douala.",
   path: "/a-propos",
+  imagePath: "/images/image-01.jpeg",
+  imageAlt: "Équipe et environnement technique SEF SARL au Cameroun",
   keywords: ["spécialiste injection diesel Yaoundé", "garage injection diesel Douala"]
 });
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={getWebPageSchema({
+          title: "À propos de SEF SARL",
+          description:
+            "Découvrez l’histoire, la mission, la vision et les engagements qualité de SEF SARL, spécialiste de l’injection diesel à Yaoundé et Douala.",
+          path: "/a-propos",
+          type: "AboutPage",
+          imagePath: "/images/image-01.jpeg",
+          imageAlt: "Intervention mécanique SEF SARL au Cameroun"
+        })}
+      />
+      <JsonLd
+        data={getBreadcrumbSchema([
+          { name: "Accueil", path: "/" },
+          { name: "À propos", path: "/a-propos" }
+        ])}
+      />
       <PageHero
         eyebrow="À propos"
         title="Une entreprise construite autour du sérieux technique, de la confiance client et de la garantie assurée."

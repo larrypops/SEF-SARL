@@ -37,7 +37,7 @@ export function ActionLink({
   const externalProps = {
     className: classes,
     target: newTab ? "_blank" : undefined,
-    rel: newTab ? "noreferrer" : undefined
+    rel: newTab ? "noreferrer noopener" : undefined
   };
 
   if (href.startsWith("/")) {

@@ -2,22 +2,43 @@ import { ActionLink } from "@/components/action-link";
 import { ContactForm } from "@/components/contact-form";
 import { CtaBanner } from "@/components/cta-banner";
 import { FaqSection } from "@/components/faq-section";
+import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { company, contactFaqs } from "@/lib/data";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, getBreadcrumbSchema, getFaqSchema, getWebPageSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Contact SEF SARL",
   description:
     "Contactez SEF SARL par téléphone, e-mail ou WhatsApp pour une réparation de pompe d’injection, un diagnostic injecteur diesel ou une intervention technique à Yaoundé et Douala.",
   path: "/contact",
+  imagePath: "/images/injections-1.jpg",
+  imageAlt: "Pièces et éléments d’injection diesel prêts pour un diagnostic chez SEF SARL",
   keywords: ["diagnostic injection diesel Douala", "réparation pompe injection Yaoundé"]
 });
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd
+        data={getWebPageSchema({
+          title: "Contact SEF SARL",
+          description:
+            "Contactez SEF SARL par téléphone, e-mail ou WhatsApp pour une réparation de pompe d’injection, un diagnostic injecteur diesel ou une intervention technique à Yaoundé et Douala.",
+          path: "/contact",
+          type: "ContactPage",
+          imagePath: "/images/injections-1.jpg",
+          imageAlt: "Contact et diagnostic injection diesel SEF SARL"
+        })}
+      />
+      <JsonLd
+        data={getBreadcrumbSchema([
+          { name: "Accueil", path: "/" },
+          { name: "Contact", path: "/contact" }
+        ])}
+      />
+      <JsonLd data={getFaqSchema(contactFaqs, "/contact")} />
       <PageHero
         eyebrow="Contact"
         title="Un échange direct pour préparer votre diagnostic, votre réparation ou votre intervention technique."

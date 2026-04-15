@@ -9,13 +9,15 @@ import { RealisationsPreview } from "@/components/realisations-preview";
 import { ServicesOverview } from "@/components/services-overview";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { faqs } from "@/lib/data";
-import { buildMetadata, getFaqSchema, getServicesSchema } from "@/lib/seo";
+import { buildMetadata, getFaqSchema, getServicesSchema, getWebPageSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Réparation de pompes et injecteurs diesel au Cameroun",
   description:
     "SEF SARL, spécialiste en injection diesel à Yaoundé et Douala, assure diagnostic fiable, réparation de pompes d’injection, injecteurs toutes marques, intervention technique et vente de pièces.",
   path: "/",
+  imagePath: "/images/hero-image.jpg",
+  imageAlt: "Atelier SEF SARL spécialisé en réparation de pompes et injecteurs diesel au Cameroun",
   keywords: [
     "réparation pompe injection Yaoundé",
     "spécialiste injection diesel Yaoundé",
@@ -26,8 +28,18 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
+      <JsonLd
+        data={getWebPageSchema({
+          title: "Réparation de pompes et injecteurs diesel au Cameroun",
+          description:
+            "SEF SARL, spécialiste en injection diesel à Yaoundé et Douala, assure diagnostic fiable, réparation de pompes d’injection, injecteurs toutes marques, intervention technique et vente de pièces.",
+          path: "/",
+          imagePath: "/images/hero-image.jpg",
+          imageAlt: "Atelier diesel SEF SARL au Cameroun"
+        })}
+      />
       <JsonLd data={getServicesSchema()} />
-      <JsonLd data={getFaqSchema(faqs)} />
+      <JsonLd data={getFaqSchema(faqs, "/")} />
       <HeroSection />
       <CompanyIntro />
       <ServicesOverview />
@@ -45,4 +57,3 @@ export default function HomePage() {
     </>
   );
 }
-

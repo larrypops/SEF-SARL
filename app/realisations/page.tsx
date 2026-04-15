@@ -2,22 +2,43 @@ import Image from "next/image";
 
 import { ActionLink } from "@/components/action-link";
 import { CtaBanner } from "@/components/cta-banner";
+import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { realisations } from "@/lib/data";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, getBreadcrumbSchema, getRealisationsSchema, getWebPageSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Réalisations et cas d’intervention en injection diesel",
   description:
     "Explorez des réalisations SEF SARL autour des pompes d’injection, injecteurs diesel, diagnostics fiables, pièces liées au circuit et interventions techniques à Yaoundé et Douala.",
   path: "/realisations",
+  imagePath: "/images/hero-image.jpg",
+  imageAlt: "Intervention injection diesel SEF SARL à Yaoundé et Douala",
   keywords: ["garage injection diesel Douala", "injecteur diesel Cameroun"]
 });
 
 export default function RealisationsPage() {
   return (
     <>
+      <JsonLd
+        data={getWebPageSchema({
+          title: "Réalisations et cas d’intervention en injection diesel",
+          description:
+            "Explorez des réalisations SEF SARL autour des pompes d’injection, injecteurs diesel, diagnostics fiables, pièces liées au circuit et interventions techniques à Yaoundé et Douala.",
+          path: "/realisations",
+          type: "CollectionPage",
+          imagePath: "/images/hero-image.jpg",
+          imageAlt: "Intervention diesel documentée par SEF SARL"
+        })}
+      />
+      <JsonLd
+        data={getBreadcrumbSchema([
+          { name: "Accueil", path: "/" },
+          { name: "Réalisations", path: "/realisations" }
+        ])}
+      />
+      <JsonLd data={getRealisationsSchema()} />
       <PageHero
         eyebrow="Réalisations"
         title="Des interventions documentées pour montrer la qualité du diagnostic et de la remise en état."

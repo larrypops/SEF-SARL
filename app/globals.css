@@ -89,7 +89,32 @@
   }
 
   .button-base {
-    @apply inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold tracking-[0.08em] transition duration-300;
+    @apply relative isolate inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3.5 text-sm font-semibold tracking-[0.08em] transition duration-300;
+  }
+
+  .button-base::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: 0;
+    border-radius: 9999px;
+    opacity: 0;
+    transform: translateX(-24%);
+    transition:
+      opacity 280ms ease,
+      transform 420ms ease;
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04));
+  }
+
+  .button-base:hover::before,
+  .button-base:focus-visible::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .button-base > * {
+    position: relative;
+    z-index: 1;
   }
 
   .button-primary {
