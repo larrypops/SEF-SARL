@@ -10,7 +10,7 @@ export const company = {
   description:
     "Maintenance, diagnostic et réparation des circuits d’injection diesel pour poids lourds, engins, utilitaires et véhicules de tourisme.",
   longDescription:
-    "SEF SARL accompagne les professionnels du transport, les conducteurs et les gestionnaires de flotte pour la réparation des pompes d’injection, la remise en état des injecteurs mécaniques et électroniques, le diagnostic fiable et la vente de pièces liées aux circuits d’injection diesel à Yaoundé, Douala et au Cameroun.",
+    "SEF SARL accompagne les professionnels du transport, les conducteurs et les gestionnaires de flotte pour la réparation des pompes d’injection, la remise en état des injecteurs mécaniques et électroniques, le diagnostic fiable, la vente de pièces liées aux circuits d’injection diesel, la location de véhicule et la reprogrammation des calculateurs et des clés à Yaoundé, Douala et au Cameroun.",
   email: "sefsarlcamer@gmail.com",
   emailHref: createMailHref("sefsarlcamer@gmail.com"),
   phonePrimary: "+237 694 261 334",
@@ -136,32 +136,54 @@ export const services = [
     ],
     equipment: ["Pompes", "Injecteurs", "Éléments de circuit", "Véhicules diesel"],
     image: "/images/image-03.jpeg"
-  }
-] as const;
-
-export const homeServices = [
-  ...services,
+  },
   {
     id: "location-vehicule",
     step: "06",
-    href: "/contact#formulaire",
     title: "Location de véhicule",
     shortDescription:
       "Location de véhicules pour déplacements privés, besoins professionnels et missions ponctuelles, avec une offre pensée pour la mobilité, la fiabilité et la disponibilité.",
-    image: "/images/service-02.png",
-    equipment: ["Déplacements", "Missions professionnelles", "Besoins ponctuels", "Mobilité"]
+    longDescription:
+      "SEF SARL propose également un service de location de véhicule pour accompagner les besoins de mobilité des particuliers, des entreprises et des équipes en déplacement. Cette solution convient aussi bien aux trajets ponctuels qu’aux missions professionnelles, avec une prise de contact rapide par téléphone ou WhatsApp pour vérifier la disponibilité et orienter le bon choix de véhicule.",
+    benefitTitle: "Ce que vous apporte ce service",
+    benefits: [
+      "Une solution de mobilité rapide pour un besoin ponctuel ou professionnel",
+      "Des véhicules adaptés selon le type de déplacement, la durée et le niveau de confort recherché",
+      "Une prise de contact simple pour réserver ou demander une disponibilité"
+    ],
+    equipment: [
+      "Déplacements privés",
+      "Missions professionnelles",
+      "Mise à disposition ponctuelle",
+      "Mobilité urbaine et interurbaine"
+    ],
+    image: "/images/service-02.png"
   },
   {
     id: "reprogrammation-calculateurs-cles",
     step: "07",
-    href: "/contact#formulaire",
     title: "Reprogrammation des calculateurs et des clés des véhicules",
     shortDescription:
       "Service de reprogrammation électronique pour calculateurs et clés afin d’accompagner les remises en service, les interventions ciblées et certains besoins de configuration véhicule.",
-    image: "/images/service-01.png",
-    equipment: ["Clés de véhicules", "Calculateurs", "Diagnostic électronique", "Remise en service"]
+    longDescription:
+      "Nous intervenons aussi sur la reprogrammation des calculateurs et des clés des véhicules lorsque la remise en service, le diagnostic électronique ou la configuration du système l’exige. Cette prestation répond aux besoins des clients confrontés à un défaut de reconnaissance, à un problème lié à l’anti-démarrage, à une intervention électronique ciblée ou à une remise en route nécessitant un paramétrage cohérent.",
+    benefitTitle: "Pourquoi cette prestation est utile",
+    benefits: [
+      "Un accompagnement plus précis sur les besoins électroniques liés au véhicule",
+      "Une remise en service facilitée après certaines pannes ou interventions techniques",
+      "Un contact direct pour vérifier rapidement la faisabilité selon le véhicule et la situation"
+    ],
+    equipment: [
+      "Calculateurs moteur",
+      "Clés codées",
+      "Systèmes anti-démarrage",
+      "Véhicules de tourisme et utilitaires"
+    ],
+    image: "/images/service-01.png"
   }
 ] as const;
+
+export const homeServices = services;
 
 export const reasons = [
   {

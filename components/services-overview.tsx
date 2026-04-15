@@ -36,10 +36,10 @@ export function ServicesOverview() {
                     {service.step}
                   </span>
                   <Link
-                    href={"href" in service ? service.href : `/services#${service.id}`}
+                    href={`/services#${service.id}`}
                     className="text-sm uppercase tracking-[0.16em] text-slate-500 transition hover:text-midnight"
                   >
-                    {index < 5 ? "Voir le détail" : "Nouveau service"}
+                    Voir le détail
                   </Link>
                 </div>
 

@@ -10,16 +10,18 @@ import { buildMetadata, getBreadcrumbSchema, getServicesSchema, getWebPageSchema
 import { cn } from "@/lib/utils";
 
 export const metadata = buildMetadata({
-  title: "Services de réparation et diagnostic injection diesel",
+  title: "Services de réparation, location et reprogrammation véhicule",
   description:
-    "Découvrez les services SEF SARL : réparation de pompes d’injection pour engins et camions, injecteurs mécaniques et électroniques, diagnostic fiable, intervention technique et vente de pièces au Cameroun.",
+    "Découvrez les services SEF SARL : réparation de pompes d’injection, injecteurs mécaniques et électroniques, diagnostic fiable, intervention technique, vente de pièces, location de véhicule et reprogrammation des calculateurs et des clés au Cameroun.",
   path: "/services",
   imagePath: "/images/injections-3.jpg",
   imageAlt: "Pompe d’injection diesel contrôlée dans l’atelier SEF SARL",
   keywords: [
     "réparation injecteurs électroniques Cameroun",
     "maintenance circuit injection diesel",
-    "réparation pompe injection camion Cameroun"
+    "réparation pompe injection camion Cameroun",
+    "location de véhicule Cameroun",
+    "reprogrammation calculateur véhicule Cameroun"
   ]
 });
 
@@ -28,9 +30,9 @@ export default function ServicesPage() {
     <>
       <JsonLd
         data={getWebPageSchema({
-          title: "Services de réparation et diagnostic injection diesel",
+          title: "Services de réparation, location et reprogrammation véhicule",
           description:
-            "Découvrez les services SEF SARL : réparation de pompes d’injection pour engins et camions, injecteurs mécaniques et électroniques, diagnostic fiable, intervention technique et vente de pièces au Cameroun.",
+            "Découvrez les services SEF SARL : réparation de pompes d’injection, injecteurs mécaniques et électroniques, diagnostic fiable, intervention technique, vente de pièces, location de véhicule et reprogrammation des calculateurs et des clés au Cameroun.",
           path: "/services",
           type: "CollectionPage",
           imagePath: "/images/injections-3.jpg",
@@ -46,12 +48,12 @@ export default function ServicesPage() {
       <JsonLd data={getServicesSchema()} />
       <PageHero
         eyebrow="Services SEF SARL"
-        title="Des prestations diesel ciblées pour retrouver un moteur plus stable et une intervention plus sûre."
-        description="De la réparation de pompe d’injection au diagnostic injection diesel à Douala ou Yaoundé, nous adaptons chaque intervention au véhicule, à la panne et au niveau d’exigence attendu par le client."
+        title="Des prestations techniques et pratiques pour l’injection diesel, la mobilité et l’électronique véhicule."
+        description="De la réparation de pompe d’injection au diagnostic diesel, de la location de véhicule à la reprogrammation des calculateurs et des clés, SEF SARL propose un accompagnement clair, utile et réactif selon le besoin du client."
         highlights={[
           "Pompes d’injection pour camions et engins",
           "Injecteurs mécaniques et électroniques toutes marques",
-          "Diagnostic fiable, intervention technique et pièces liées au circuit"
+          "Diagnostic fiable, location de véhicule, intervention technique et électronique"
         ]}
         image="/images/injections-3.jpg"
         imageAlt="Pompe d’injection remise en état dans l’atelier SEF SARL"
