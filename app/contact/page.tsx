@@ -36,7 +36,7 @@ export default function ContactPage() {
                 {company.phonePrimary}
               </a>
               <p className="mt-4 text-base leading-8 text-slate-600">
-                Contact principal pour la prise d’informations et les demandes WhatsApp.
+                Contact principal pour la prise d’informations, l’organisation des interventions et le suivi client.
               </p>
             </div>
           </Reveal>
@@ -68,7 +68,7 @@ export default function ContactPage() {
           <Reveal delay={0.15}>
             <div className="panel h-full p-7">
               <p className="eyebrow">WhatsApp</p>
-              <p className="mt-5 text-2xl text-slate-950">Réponse rapide</p>
+              <p className="mt-5 text-2xl text-slate-950">{company.whatsappNumber}</p>
               <p className="mt-4 text-base leading-8 text-slate-600">
                 Envoyez vos symptômes, votre ville et le type de véhicule pour un premier retour utile.
               </p>

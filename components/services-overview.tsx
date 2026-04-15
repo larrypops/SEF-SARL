@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { services } from "@/lib/data";
+import { homeServices } from "@/lib/data";
 
 export function ServicesOverview() {
   return (
@@ -11,13 +11,13 @@ export function ServicesOverview() {
         <Reveal>
           <SectionHeading
             eyebrow="Services"
-            title="Réparation, diagnostic et accompagnement technique pour les circuits d’injection diesel."
-            description="Chaque prestation répond à un besoin concret : remettre un moteur en état, fiabiliser une pompe d’injection, corriger un défaut d’injecteurs ou sécuriser une intervention technique sur véhicule diesel."
+            title="Réparation, diagnostic, mobilité et assistance électronique pour vos véhicules."
+            description="La page d’accueil met en avant le cœur du savoir-faire SEF SARL, avec les services d’injection diesel, la location de véhicule et la reprogrammation des calculateurs et des clés selon les besoins exprimés par le client."
           />
         </Reveal>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {services.map((service, index) => (
+          {homeServices.map((service, index) => (
             <Reveal key={service.id} delay={index * 0.06}>
               <article className="panel h-full p-8 md:p-10">
                 <div className="flex items-start justify-between gap-6">
@@ -25,10 +25,10 @@ export function ServicesOverview() {
                     {service.step}
                   </span>
                   <Link
-                    href={`/services#${service.id}`}
+                    href={"href" in service ? service.href : `/services#${service.id}`}
                     className="text-sm uppercase tracking-[0.16em] text-slate-500 transition hover:text-midnight"
                   >
-                    Voir le détail
+                    {index < 5 ? "Voir le détail" : "Nouveau service"}
                   </Link>
                 </div>
 
@@ -52,4 +52,3 @@ export function ServicesOverview() {
     </section>
   );
 }
-

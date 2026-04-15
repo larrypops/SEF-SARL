@@ -15,10 +15,11 @@ export const company = {
   emailHref: createMailHref("sefsarlcamer@gmail.com"),
   phonePrimary: "+237 694 261 334",
   phoneSecondary: "+237 673 496 144",
+  whatsappNumber: "+237 656 682 881",
   phonePrimaryHref: createTelHref("+237 694 261 334"),
   phoneSecondaryHref: createTelHref("+237 673 496 144"),
   whatsappMessage,
-  whatsappHref: createWhatsAppHref("+237694261334", whatsappMessage),
+  whatsappHref: createWhatsAppHref("+237656682881", whatsappMessage),
   locations: [
     {
       city: "Yaoundé",
@@ -135,6 +136,28 @@ export const services = [
     ],
     equipment: ["Pompes", "Injecteurs", "Éléments de circuit", "Véhicules diesel"],
     image: "/images/injections-3.jpg"
+  }
+] as const;
+
+export const homeServices = [
+  ...services,
+  {
+    id: "location-vehicule",
+    step: "06",
+    href: "/contact#formulaire",
+    title: "Location de véhicule",
+    shortDescription:
+      "Mise à disposition de véhicules selon les besoins du client, avec une approche orientée disponibilité, mobilité et continuité d’activité.",
+    equipment: ["Déplacements", "Missions professionnelles", "Besoins ponctuels", "Mobilité"]
+  },
+  {
+    id: "reprogrammation-calculateurs-cles",
+    step: "07",
+    href: "/contact#formulaire",
+    title: "Reprogrammation des calculateurs et des clés des véhicules",
+    shortDescription:
+      "Service de reprogrammation pour calculateurs et clés de véhicules afin d’accompagner certaines opérations électroniques, la remise en service et la sécurisation de l’usage.",
+    equipment: ["Clés de véhicules", "Calculateurs", "Diagnostic électronique", "Remise en service"]
   }
 ] as const;
 
@@ -306,7 +329,7 @@ export const contactFaqs = [
   {
     question: "Quel numéro utiliser pour un premier contact ?",
     answer:
-      "Le numéro WhatsApp principal est le +237 694 261 334. Vous pouvez aussi appeler directement l’un des deux contacts affichés sur la page."
+      "Le numéro WhatsApp principal est le +237 656 682 881. Vous pouvez aussi appeler directement l’un des deux contacts affichés sur la page."
   },
   {
     question: "Travaillez-vous uniquement à Yaoundé ?",
