@@ -224,6 +224,36 @@ export const products = [
   }
 ] as const;
 
+export const repairShowcase = [
+  {
+    id: "pompe-injection-caterpillar-3306",
+    title: "Pompe d’injection Caterpillar 3306",
+    label: "Réparation atelier",
+    description:
+      "Interventions ciblées sur les pompes d’injection Caterpillar 3306 pour restaurer un fonctionnement plus stable, plus propre et mieux adapté aux usages intensifs.",
+    applications: ["Caterpillar 3306", "Engins", "Matériels lourds"],
+    image: "/images/repair/pompe-injection-caterpillar-3306.jpeg"
+  },
+  {
+    id: "pompe-hp-c7-c9",
+    title: "Pompe HP C7-C9",
+    label: "Haute pression diesel",
+    description:
+      "Contrôle et réparation de pompe haute pression C7-C9 pour sécuriser l’alimentation du système d’injection et fiabiliser la remise en route.",
+    applications: ["C7-C9", "Pompe HP", "Injection diesel"],
+    image: "/images/repair/pompe-hp-c7-c9.jpeg"
+  },
+  {
+    id: "pompe-injection-chinoise-reparation",
+    title: "Pompe d’injection chinoise",
+    label: "Réparation dédiée",
+    description:
+      "Prise en charge de certaines pompes d’injection chinoises selon le défaut observé, l’état de l’ensemble et la faisabilité technique de la réparation.",
+    applications: ["Pompes diesel", "Réparation ciblée", "Contrôle atelier"],
+    image: "/images/repair/pompe-injection-chinoise-reparation.jpeg"
+  }
+] as const;
+
 export const reasons = [
   {
     title: "Spécialisation diesel affirmée",
