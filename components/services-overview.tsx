@@ -21,13 +21,13 @@ export function ServicesOverview() {
           {homeServices.map((service, index) => (
             <Reveal key={service.id} delay={index * 0.06}>
               <article className="panel h-full p-8 md:p-10">
-                <div className="relative mb-8 aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-slate-200/70 bg-slate-100">
+                <div className="image-card-compact mb-8">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="object-cover object-center"
+                    className="image-fill-portrait"
                   />
                 </div>
 

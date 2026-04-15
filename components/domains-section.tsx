@@ -18,13 +18,13 @@ export function DomainsSection() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[minmax(320px,0.85fr)_minmax(0,1.15fr)]">
           <Reveal className="panel overflow-hidden p-3">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] sm:aspect-square lg:min-h-[440px] lg:aspect-auto">
+            <div className="image-card-feature">
               <Image
                 src="/images/image-03.jpeg"
                 alt="Pièces et éléments de circuit d’injection diesel préparés pour une intervention"
                 fill
                 sizes="(max-width: 1024px) 100vw, 35vw"
-                className="object-cover object-center"
+                className="image-fill-portrait"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0.1),rgba(7,16,21,0.76))]" />
               <div className="absolute inset-x-0 bottom-0 p-6">

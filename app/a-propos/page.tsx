@@ -67,13 +67,13 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={0.12} className="panel overflow-hidden p-3">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] bg-midnight sm:aspect-square lg:min-h-[460px] lg:aspect-auto">
+            <div className="image-card-feature bg-midnight">
               <Image
                 src="/images/image-01.jpeg"
                 alt="Intervention mécanique lourde réalisée dans l’environnement SEF SARL"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-center opacity-90"
+                className="image-fill-portrait opacity-90"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0.2),rgba(7,16,21,0.78))]" />
               <div className="absolute inset-x-0 bottom-0 p-6">

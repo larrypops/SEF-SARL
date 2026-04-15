@@ -21,13 +21,13 @@ export function RealisationsPreview() {
           {realisations.slice(0, 3).map((item, index) => (
             <Reveal key={item.title} delay={index * 0.06}>
               <article className="panel h-full overflow-hidden p-3">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.55rem] sm:aspect-square lg:min-h-[260px] lg:aspect-auto">
+                <div className="image-card-tall lg:min-h-[280px]">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 30vw"
-                    className="object-cover object-center transition duration-500 hover:scale-[1.03]"
+                    className="image-fill-portrait transition duration-500 hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0),rgba(7,16,21,0.62))]" />
                   <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-xs uppercase tracking-[0.22em] text-white backdrop-blur-sm">

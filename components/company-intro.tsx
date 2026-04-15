@@ -42,13 +42,13 @@ export function CompanyIntro() {
         </Reveal>
 
         <Reveal delay={0.12} className="panel overflow-hidden p-3">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.65rem] sm:aspect-square lg:min-h-[440px] lg:aspect-auto">
+          <div className="image-card-feature">
             <Image
               src="/images/image-02.jpeg"
               alt="Technicien SEF SARL au travail sur un organe d’injection diesel en atelier"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover object-center"
+              className="image-fill-portrait"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,21,0.08),rgba(7,16,21,0.72))]" />
             <div className="absolute inset-x-0 bottom-0 p-6">
