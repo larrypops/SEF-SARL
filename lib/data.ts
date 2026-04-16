@@ -118,7 +118,7 @@ export const services = [
       "Une intervention pensée pour réduire le temps d’arrêt"
     ],
     equipment: ["Ateliers partenaires", "Flottes", "Camions", "Engins diesel"],
-    image: "/images/image-02.jpeg"
+    image: "/images/image-04.jpeg"
   },
   {
     id: "vente-pieces",
