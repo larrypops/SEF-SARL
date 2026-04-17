@@ -88,9 +88,14 @@ export const rootMetadata: Metadata = {
     canonical: "/"
   },
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    shortcut: ["/icon.svg"],
-    apple: ["/icon.svg"]
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/icon.svg", type: "image/svg+xml" }
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }]
   },
   openGraph: {
     type: "website",
