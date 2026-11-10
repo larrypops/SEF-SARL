@@ -11,11 +11,11 @@ import { buildMetadata, getBreadcrumbSchema, getRealisationsSchema, getWebPageSc
 export const metadata = buildMetadata({
   title: "Réalisations et cas d’intervention en injection diesel",
   description:
-    "Explorez des réalisations SEF SARL autour des pompes d’injection, injecteurs diesel, diagnostics fiables, pièces liées au circuit et interventions techniques à Yaoundé et Douala.",
+    "Découvrez les interventions SEF SARL sur les pompes, injecteurs et circuits d’injection diesel pour les clients de Yaoundé, Douala et Kribi.",
   path: "/realisations",
   imagePath: "/images/hero-image.jpg",
-  imageAlt: "Intervention injection diesel SEF SARL à Yaoundé et Douala",
-  keywords: ["garage injection diesel Douala", "injecteur diesel Cameroun"]
+  imageAlt: "Intervention injection diesel SEF SARL au Cameroun",
+  keywords: ["garage injection diesel Douala", "injecteur diesel Cameroun", "injecteur diesel Kribi"]
 });
 
 export default function RealisationsPage() {
@@ -25,7 +25,7 @@ export default function RealisationsPage() {
         data={getWebPageSchema({
           title: "Réalisations et cas d’intervention en injection diesel",
           description:
-            "Explorez des réalisations SEF SARL autour des pompes d’injection, injecteurs diesel, diagnostics fiables, pièces liées au circuit et interventions techniques à Yaoundé et Douala.",
+            "Découvrez les interventions SEF SARL sur les pompes, injecteurs et circuits d’injection diesel pour les clients de Yaoundé, Douala et Kribi.",
           path: "/realisations",
           type: "CollectionPage",
           imagePath: "/images/hero-image.jpg",

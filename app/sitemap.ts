@@ -42,6 +42,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.86,
       images: [absoluteUrl("/images/injections-1.jpg"), absoluteUrl("/images/logo.jpg")]
+    },
+    {
+      url: `${siteUrl}/kribi`,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+      images: [
+        absoluteUrl("/images/injections-3.jpg"),
+        absoluteUrl("/images/hero-image.jpg"),
+        absoluteUrl("/images/logo.jpg")
+      ]
     }
   ];
 

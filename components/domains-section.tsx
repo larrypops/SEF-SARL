@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -30,14 +31,22 @@ export function DomainsSection() {
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <div className="dark-panel p-5">
                   <p className="text-xs uppercase tracking-[0.32em] text-[#8FE7C4]">
-                    Yaoundé | Douala
+                    Yaoundé | Douala | Kribi
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-slate-200">
-                    {company.locations[0].city} : {company.locations[0].area}
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-slate-200">
-                    {company.locations[1].city} : {company.locations[1].area}
-                  </p>
+                  {company.locations.map((location, index) => (
+                    <p
+                      key={location.slug}
+                      className={index === 0 ? "mt-3 text-sm leading-7 text-slate-200" : "mt-2 text-sm leading-7 text-slate-200"}
+                    >
+                      {location.city} : {location.area}
+                    </p>
+                  ))}
+                  <Link
+                    href="/kribi"
+                    className="mt-4 inline-flex text-sm font-semibold text-[#8FE7C4] transition hover:text-white"
+                  >
+                    Découvrir SEF SARL à Kribi
+                  </Link>
                 </div>
               </div>
             </div>

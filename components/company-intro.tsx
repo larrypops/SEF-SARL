@@ -8,7 +8,7 @@ import { company } from "@/lib/data";
 const commitments = [
   "Réparation de pompes et d’injecteurs diesel avec méthode",
   "Diagnostic injection diesel fiable avant toute décision technique",
-  "Présence à Yaoundé et Douala pour un contact plus direct"
+  "Présence à Yaoundé, Douala et Kribi pour un contact plus direct"
 ];
 
 export function CompanyIntro() {

@@ -10,7 +10,7 @@ export const company = {
   description:
     "Maintenance, diagnostic et réparation des circuits d’injection diesel pour poids lourds, engins, utilitaires et véhicules de tourisme.",
   longDescription:
-    "SEF SARL accompagne les professionnels du transport, les conducteurs et les gestionnaires de flotte pour la réparation des pompes d’injection, la remise en état des injecteurs mécaniques et électroniques, le diagnostic fiable, la vente de pièces liées aux circuits d’injection diesel, la location de véhicule et la reprogrammation des calculateurs et des clés à Yaoundé, Douala et au Cameroun.",
+    "SEF SARL accompagne les professionnels du transport, les conducteurs et les gestionnaires de flotte pour la réparation des pompes d’injection, la remise en état des injecteurs mécaniques et électroniques, le diagnostic fiable, la vente de pièces liées aux circuits d’injection diesel, la location de véhicule et la reprogrammation des calculateurs et des clés à Yaoundé, Douala, Kribi et partout au Cameroun.",
   email: "sefsarlcamer@gmail.com",
   emailHref: createMailHref("sefsarlcamer@gmail.com"),
   phonePrimary: "+237 694 261 334",
@@ -24,15 +24,26 @@ export const company = {
     {
       city: "Yaoundé",
       area: "Tropicana, à environ 20 m de l’Institut Universitaire NDI Samba",
-      label: "Atelier de Yaoundé"
+      label: "Atelier de Yaoundé",
+      slug: "yaounde",
+      href: "/contact#yaounde"
     },
     {
       city: "Douala",
       area: "Nyalla Pariso",
-      label: "Point de contact de Douala"
+      label: "Point de contact de Douala",
+      slug: "douala",
+      href: "/contact#douala"
+    },
+    {
+      city: "Kribi",
+      area: "Lieu-dit Antenne Orange",
+      label: "Implantation de Kribi",
+      slug: "kribi",
+      href: "/kribi"
     }
   ],
-  serviceAreas: ["Yaoundé", "Douala", "Cameroun"],
+  serviceAreas: ["Yaoundé", "Douala", "Kribi", "Cameroun"],
   hoursNote:
     "Les passages à l’atelier et les interventions techniques se confirment par téléphone ou WhatsApp selon la nature de la panne."
 } as const;
@@ -232,7 +243,7 @@ export const reasons = [
       "Notre priorité est de livrer une réparation sérieuse, expliquée et assumée avec un engagement qualité clair."
   },
   {
-    title: "Présence à Yaoundé et Douala",
+    title: "Présence à Yaoundé, Douala et Kribi",
     description:
       "Cette proximité facilite la prise de contact, l’organisation des passages à l’atelier et le suivi des interventions."
   }
@@ -315,7 +326,7 @@ export const realisations = [
     title: "Appui technique sur une intervention complexe",
     category: "Intervention",
     issue: "Validation technique avant remise en route",
-    location: "Yaoundé et Douala",
+    location: "Yaoundé, Douala et Kribi",
     description:
       "Accompagnement technique pour vérifier la cohérence du diagnostic, la qualité du remontage et les points critiques avant redémarrage.",
     result:
@@ -358,9 +369,9 @@ export const faqs = [
       "Oui. L’atelier intervient sur les injecteurs diesel mécaniques et électroniques toutes marques avec une approche orientée diagnostic, contrôle et remise en état adaptée à la technologie concernée."
   },
   {
-    question: "Proposez-vous un diagnostic injection diesel à Yaoundé et Douala ?",
+    question: "Proposez-vous un diagnostic injection diesel à Yaoundé, Douala et Kribi ?",
     answer:
-      "Oui. SEF SARL réalise des diagnostics fiables pour orienter correctement la réparation et limiter les remplacements inutiles sur les circuits d’injection diesel à Yaoundé et Douala."
+      "Oui. SEF SARL réalise des diagnostics fiables pour orienter correctement la réparation et limiter les remplacements inutiles sur les circuits d’injection diesel à Yaoundé, Douala et Kribi. À Kribi, l’entreprise est située au lieu-dit Antenne Orange."
   },
   {
     question: "Peut-on vous contacter pour une panne sur un véhicule de tourisme diesel ?",
@@ -388,12 +399,35 @@ export const contactFaqs = [
   {
     question: "Travaillez-vous uniquement à Yaoundé ?",
     answer:
-      "Non. SEF SARL est présente à Yaoundé et à Douala, avec une couverture adaptée aux demandes de clients situés au Cameroun."
+      "Non. SEF SARL est présente à Yaoundé, Douala et Kribi, avec une couverture adaptée aux demandes de clients situés au Cameroun. À Kribi, retrouvez-nous au lieu-dit Antenne Orange."
   },
   {
     question: "Que faut-il préparer avant de vous écrire ?",
     answer:
       "Indiquez le type de véhicule, les symptômes constatés, votre ville et, si possible, les travaux déjà effectués. Cela permet d’orienter plus vite le diagnostic."
+  }
+] as const;
+
+export const kribiFaqs = [
+  {
+    question: "Où se trouve SEF SARL à Kribi ?",
+    answer:
+      "SEF SARL est située à Kribi, au lieu-dit Antenne Orange. Contactez-nous par téléphone ou WhatsApp avant votre déplacement afin de préparer votre passage."
+  },
+  {
+    question: "Quels services d’injection diesel sont proposés à Kribi ?",
+    answer:
+      "SEF SARL accompagne les clients de Kribi pour le diagnostic des circuits d’injection diesel, la réparation des pompes et injecteurs, l’intervention technique et la fourniture de pièces adaptées."
+  },
+  {
+    question: "Intervenez-vous sur les camions, engins et véhicules de tourisme à Kribi ?",
+    answer:
+      "Oui. Les prestations concernent les poids lourds, camions, engins, utilitaires et véhicules de tourisme diesel, selon la panne observée et la faisabilité technique."
+  },
+  {
+    question: "Comment demander un diagnostic injection diesel à Kribi ?",
+    answer:
+      "Envoyez par WhatsApp le type de véhicule, les symptômes constatés et, si possible, des photos ou les références des pièces. SEF SARL pourra ainsi préparer un premier échange utile."
   }
 ] as const;
 

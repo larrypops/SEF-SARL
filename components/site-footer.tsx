@@ -78,7 +78,9 @@ export function SiteFooter() {
               </li>
               {company.locations.map((location) => (
                 <li key={location.label}>
-                  {location.city} - {location.area}
+                  <Link href={location.href} className="transition hover:text-white">
+                    {location.city} - {location.area}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -87,7 +89,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} SEF SARL. Tous droits réservés.</p>
-          <p>Villes desservies : Yaoundé, Douala, Cameroun.</p>
+          <p>Présence locale : Yaoundé, Douala et Kribi.</p>
         </div>
       </div>
     </footer>

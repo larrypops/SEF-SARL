@@ -16,6 +16,11 @@ const baseKeywords = [
   "pièces injection diesel Yaoundé",
   "réparation pompe injection camion Cameroun",
   "garage injection diesel Douala",
+  "réparation pompe injection Kribi",
+  "spécialiste injection diesel Kribi",
+  "diagnostic injection diesel Kribi",
+  "garage injection diesel Kribi",
+  "injecteur diesel Kribi",
   "réparation injecteurs toutes marques"
 ];
 
@@ -74,7 +79,7 @@ function getShareImages(
 export const rootMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${company.name} | Injection diesel à Yaoundé et Douala`,
+    default: `${company.name} | Injection diesel à Yaoundé, Douala et Kribi`,
     template: `%s | ${company.name}`
   },
   description: company.longDescription,
@@ -101,14 +106,14 @@ export const rootMetadata: Metadata = {
     type: "website",
     locale: "fr_CM",
     url: "/",
-    title: `${company.name} | Injection diesel à Yaoundé et Douala`,
+    title: `${company.name} | Injection diesel à Yaoundé, Douala et Kribi`,
     description: company.longDescription,
     siteName: company.name,
     images: getShareImages(defaultShareImage, `${company.name} - atelier injection diesel au Cameroun`)
   },
   twitter: {
     card: "summary_large_image",
-    title: `${company.name} | Injection diesel à Yaoundé et Douala`,
+    title: `${company.name} | Injection diesel à Yaoundé, Douala et Kribi`,
     description: company.longDescription,
     images: [absoluteUrl(defaultShareImage), absoluteUrl(generatedOgImage)]
   },
@@ -136,7 +141,7 @@ export function buildMetadata({
   return {
     title,
     description,
-    keywords: [...baseKeywords, ...keywords],
+    keywords: Array.from(new Set([...baseKeywords, ...keywords])),
     alternates: {
       canonical: path
     },
@@ -209,6 +214,7 @@ export function getLocalBusinessSchema() {
     location: company.locations.map((location) => ({
       "@type": "Place",
       name: location.label,
+      url: absoluteUrl(location.href),
       address: {
         "@type": "PostalAddress",
         streetAddress: location.area,
@@ -247,6 +253,40 @@ export function getLocalBusinessSchema() {
         }
       }))
     }
+  };
+}
+
+type BusinessLocation = (typeof company.locations)[number];
+
+export function getLocationBusinessSchema(location: BusinessLocation, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "@id": absoluteUrl(`${path}#localbusiness`),
+    name: `${company.name} ${location.city}`,
+    alternateName: company.legalName,
+    description: `Diagnostic, maintenance et réparation des circuits d’injection diesel à ${location.city}.`,
+    url: absoluteUrl(path),
+    image: absoluteUrl(defaultShareImage),
+    logo: absoluteUrl("/images/logo.jpg"),
+    telephone: company.phonePrimary,
+    email: company.email,
+    priceRange: "$$",
+    currenciesAccepted: "XAF",
+    parentOrganization: {
+      "@id": absoluteUrl("/#localbusiness")
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: location.area,
+      addressLocality: location.city,
+      addressCountry: "CM"
+    },
+    areaServed: {
+      "@type": "City",
+      name: location.city
+    },
+    serviceType: services.map((service) => service.title)
   };
 }
 

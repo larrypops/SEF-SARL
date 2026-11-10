@@ -9,13 +9,18 @@ import { company, contactFaqs } from "@/lib/data";
 import { buildMetadata, getBreadcrumbSchema, getFaqSchema, getWebPageSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Contact SEF SARL",
+  title: "Contact SEF SARL à Yaoundé, Douala et Kribi",
   description:
-    "Contactez SEF SARL par téléphone, e-mail ou WhatsApp pour une réparation de pompe d’injection, un diagnostic injecteur diesel ou une intervention technique à Yaoundé et Douala.",
+    "Contactez SEF SARL pour un diagnostic ou une réparation injection diesel à Yaoundé, Douala et Kribi, au lieu-dit Antenne Orange.",
   path: "/contact",
   imagePath: "/images/injections-1.jpg",
   imageAlt: "Pièces et éléments d’injection diesel prêts pour un diagnostic chez SEF SARL",
-  keywords: ["diagnostic injection diesel Douala", "réparation pompe injection Yaoundé"]
+  keywords: [
+    "diagnostic injection diesel Douala",
+    "réparation pompe injection Yaoundé",
+    "garage injection diesel Kribi",
+    "SEF SARL Antenne Orange Kribi"
+  ]
 });
 
 export default function ContactPage() {
@@ -23,9 +28,9 @@ export default function ContactPage() {
     <>
       <JsonLd
         data={getWebPageSchema({
-          title: "Contact SEF SARL",
+          title: "Contact SEF SARL à Yaoundé, Douala et Kribi",
           description:
-            "Contactez SEF SARL par téléphone, e-mail ou WhatsApp pour une réparation de pompe d’injection, un diagnostic injecteur diesel ou une intervention technique à Yaoundé et Douala.",
+            "Contactez SEF SARL pour un diagnostic ou une réparation injection diesel à Yaoundé, Douala et Kribi, au lieu-dit Antenne Orange.",
           path: "/contact",
           type: "ContactPage",
           imagePath: "/images/injections-1.jpg",
@@ -43,7 +48,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Un échange direct pour préparer votre diagnostic, votre réparation ou votre intervention technique."
         description="Décrivez votre panne, votre type de véhicule et votre localisation. Nous pourrons vous orienter rapidement vers la solution la plus pertinente pour votre circuit d’injection diesel."
-        highlights={["WhatsApp direct", "Téléphone", "Yaoundé et Douala"]}
+        highlights={["WhatsApp direct", "Téléphone", "Yaoundé, Douala et Kribi"]}
         image="/images/injections-1.jpg"
         imageAlt="Injecteurs et pompe d’injection diesel en préparation"
       />
@@ -115,9 +120,20 @@ export default function ContactPage() {
                 <p className="eyebrow">Zones d’intervention</p>
                 <div className="mt-6 space-y-5">
                   {company.locations.map((location) => (
-                    <div key={location.label} className="border-t border-slate-200 pt-5 first:border-t-0 first:pt-0">
+                    <div
+                      id={location.slug}
+                      key={location.label}
+                      className="scroll-mt-28 border-t border-slate-200 pt-5 first:border-t-0 first:pt-0"
+                    >
                       <p className="text-xl text-slate-950">{location.city}</p>
                       <p className="mt-2 text-base leading-8 text-slate-600">{location.area}</p>
+                      {location.city === "Kribi" ? (
+                        <div className="mt-4">
+                          <ActionLink href="/kribi" variant="outline">
+                            Voir l’implantation de Kribi
+                          </ActionLink>
+                        </div>
+                      ) : null}
                     </div>
                   ))}
                 </div>
@@ -153,10 +169,10 @@ export default function ContactPage() {
                 <div className="relative">
                   <p className="eyebrow text-[#8FE7C4]">Carte de localisation</p>
                   <h2 className="mt-5 text-3xl leading-tight md:text-4xl">
-                    Repères d’accès à Yaoundé et à Douala
+                    Repères d’accès à Yaoundé, Douala et Kribi
                   </h2>
                   <p className="mt-6 max-w-xl text-base leading-8 text-slate-100">
-                    Yaoundé, Tropicana, à environ 20 m de l’Institut Universitaire NDI Samba. Douala, Nyalla Pariso. Les indications précises peuvent être confirmées par téléphone ou WhatsApp selon votre ville.
+                    Yaoundé, Tropicana, à environ 20 m de l’Institut Universitaire NDI Samba. Douala, Nyalla Pariso. Kribi, au lieu-dit Antenne Orange. Les indications précises peuvent être confirmées par téléphone ou WhatsApp selon votre ville.
                   </p>
                 </div>
               </div>

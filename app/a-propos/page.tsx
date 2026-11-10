@@ -13,11 +13,15 @@ import { buildMetadata, getBreadcrumbSchema, getWebPageSchema } from "@/lib/seo"
 export const metadata = buildMetadata({
   title: "À propos de SEF SARL",
   description:
-    "Découvrez l’histoire, la mission, la vision et les engagements qualité de SEF SARL, spécialiste de l’injection diesel à Yaoundé et Douala.",
+    "Découvrez l’histoire, la mission et les engagements de SEF SARL, spécialiste de l’injection diesel à Yaoundé, Douala et Kribi.",
   path: "/a-propos",
   imagePath: "/images/image-01.jpeg",
   imageAlt: "Équipe et environnement technique SEF SARL au Cameroun",
-  keywords: ["spécialiste injection diesel Yaoundé", "garage injection diesel Douala"]
+  keywords: [
+    "spécialiste injection diesel Yaoundé",
+    "garage injection diesel Douala",
+    "spécialiste injection diesel Kribi"
+  ]
 });
 
 export default function AboutPage() {
@@ -27,7 +31,7 @@ export default function AboutPage() {
         data={getWebPageSchema({
           title: "À propos de SEF SARL",
           description:
-            "Découvrez l’histoire, la mission, la vision et les engagements qualité de SEF SARL, spécialiste de l’injection diesel à Yaoundé et Douala.",
+            "Découvrez l’histoire, la mission et les engagements de SEF SARL, spécialiste de l’injection diesel à Yaoundé, Douala et Kribi.",
           path: "/a-propos",
           type: "AboutPage",
           imagePath: "/images/image-01.jpeg",
@@ -44,7 +48,7 @@ export default function AboutPage() {
         eyebrow="À propos"
         title="Une entreprise construite autour du sérieux technique, de la confiance client et de la garantie assurée."
         description="SEF SARL développe une expertise dédiée aux circuits d’injection diesel avec une ambition claire : fournir une intervention crédible, expliquée et durable pour les véhicules et équipements qui comptent dans l’activité de ses clients."
-        highlights={["Mission claire", "Garantie assurée", "Présence à Yaoundé et Douala"]}
+        highlights={["Mission claire", "Garantie assurée", "Yaoundé, Douala et Kribi"]}
         image="/images/hero-image.jpg"
         imageAlt="Atelier et intervention technique SEF SARL"
       />
@@ -80,12 +84,14 @@ export default function AboutPage() {
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <div className="dark-panel p-6">
                   <p className="text-xs uppercase tracking-[0.3em] text-[#8FE7C4]">Présence locale</p>
-                  <p className="mt-4 text-sm leading-7 text-slate-200">
-                    Yaoundé : {company.locations[0].area}
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-slate-200">
-                    Douala : {company.locations[1].area}
-                  </p>
+                  {company.locations.map((location, index) => (
+                    <p
+                      key={location.slug}
+                      className={index === 0 ? "mt-4 text-sm leading-7 text-slate-200" : "mt-2 text-sm leading-7 text-slate-200"}
+                    >
+                      {location.city} : {location.area}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

@@ -102,7 +102,7 @@ export default function OpenGraphImage() {
                   color: "rgba(255,255,255,0.8)"
                 }}
               >
-                Yaoundé • Douala • Cameroun
+                Yaoundé • Douala • Kribi • Cameroun
               </div>
             </div>
           </div>

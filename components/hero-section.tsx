@@ -67,7 +67,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="mt-5 text-4xl leading-[1.02] text-balance md:max-w-3xl md:text-7xl"
           >
-            Spécialiste en injection diesel à Yaoundé et Douala
+            Spécialiste en injection diesel à Yaoundé, Douala et Kribi
           </motion.h1>
 
           <motion.p
@@ -105,10 +105,14 @@ export function HeroSection() {
 
         <div className="absolute bottom-10 right-6 hidden max-w-sm border-l border-white/[0.15] pl-6 text-right lg:block">
           <p className="text-xs uppercase tracking-[0.32em] text-[#8FE7C4]">Présence locale</p>
-          <p className="mt-3 text-sm leading-7 text-slate-200">
-            Yaoundé, Tropicana, à environ 20 m de l’Institut Universitaire NDI Samba.
-          </p>
-          <p className="mt-2 text-sm leading-7 text-slate-200">Douala, Nyalla Pariso.</p>
+          {company.locations.map((location, index) => (
+            <p
+              key={location.slug}
+              className={index === 0 ? "mt-3 text-sm leading-7 text-slate-200" : "mt-2 text-sm leading-7 text-slate-200"}
+            >
+              {location.city}, {location.area}.
+            </p>
+          ))}
         </div>
       </div>
     </section>
